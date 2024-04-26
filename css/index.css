@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+h1 {
+  color: #4520ab;
+  font-size: 44px;
+  font-weight: 600;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+  margin-bottom: 60px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  position: relative;
+}
+
+#input {
+  width: 500px;
+  height: 56px;
+  border-radius: 14px;
+}
+
+#input::placeholder {
+  padding: 0;
+  position: absolute;
+  left: 18px;
+  font-size: 18px;
+}
+
+#button {
+  height: 38.08px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  position: absolute;
+  top: 20%;
+  right: 8px;
+}
+.delete-button {
+  width: 20px; /* Размер кнопки */
+  height: 20px; /* Размер кнопки */
+  background-color: black; /* Фон круга */
+  border-radius: 50%; /* Делает фон круглым */
+  position: relative; /* Для позиционирования псевдоэлементов */
+}
+
+.delete-button::before, .delete-button::after {
+  content: "";
+  position: absolute;
+  background-color: white; /* Цвет крестика */
+  height: 2px; /* Толщина линии крестика */
+  width: 70%; /* Длина линии крестика */
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+}
+
+.delete-button::before {
+  transform: rotate(45deg); /* Поворот линии для крестика */
+}
+
+.delete-button::after {
+  transform: rotate(-45deg); /* Поворот линии для крестика */
+}
+
+
+.delete-button {
+  width: 20px; 
+  height: 20px; 
+  background-color: black; 
+  border-radius: 50%; 
+  position: relative;
+}
+
+.delete-button::before,
+.delete-button::after {
+  content: '';
+  position: absolute;
+  background-color: white; 
+  height: 2px; 
+  width: 70%; 
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+}
+
+.delete-button::before {
+  transform: rotate(45deg);
+}
+
+.delete-button::after {
+  transform: rotate(-45deg); 
+}
+
+.dictionary {
+  margin-top: 60px;
+  margin-bottom: 90px;
+}
+
+.dictionary-row {
+  display: flex;
+  flex-direction: row;
+}
+
+#index {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.rus {
+  background-color: #f0f0f0;
+  border-right: 2px solid #000000;
+  border-bottom: 1px solid black;
+  width: 250px;
+  height: 30px;
+  padding-top: 14px;
+  padding-left: 15px;
+  position: relative;
+  justify-content: space-evenly;
+}
+
+.eng {
+  background-color: #adadad;
+  border-bottom: 1px solid black;
+  width: 250px;
+  height: 30px;
+  padding-top: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.dictionary-row:first-child > .rus {
+  border-top-left-radius: 8px;
+}
+.dictionary-row:first-child > .eng {
+  border-top-right-radius: 8px;
+}
+
+.dictionary-row:last-child > .rus {
+  border-bottom-left-radius: 8px;
+  border-bottom: #f0f0f0;
+}
+
+.dictionary-row:last-child > .eng {
+  border-bottom-right-radius: 8px;
+  border-bottom: #adadad;
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+}
+
+.tooltip {
+  display: none;
+  width: 133px;
+  height: 38px;
+  line-height: 38px;
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  overflow-wrap: break-word;
+  bottom: 38px;
+  left: 28px;
+}
+
+.tooltipEng {
+  display: none;
+  width: 133px;
+  height: 38px;
+  line-height: 38px;
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  overflow-wrap: break-word;
+  bottom: 40px;
+}
+
+clear {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  background-color: #adadad;
+  color: black;
+  width: 176px;
+  height: 38px;
+  border-radius: 8px;
+  padding: 6px 10px 8px 10px;
+  gap: 10px;
+}
+
+#clearbtn {
+  background-color: #adadad;
+  width: 176px;
+  height: 38px;
+  border-radius: 8px;
+  padding: 6px 10px 8px 10px;
+  border-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  #input {
+    width: 328px;
+    height: 58px;
+  }
+
+  #input::placeholder {
+    font-size: 15px;
+  }
+
+  .dictionary {
+    width: 328px;
+  }
+
+  .tooltip {
+    display: none !important;
+  }
+
+  .tooltipEng {
+    display: none !important;
+  }
+}
